@@ -1,0 +1,14 @@
+.calendar {
+	width: 600px;
+	height: 400px;
+	margin: 50px auto;
+	border: 1px solid green;
+	display: flex;
+}
+.day {
+	width: 200px;
+	height: 70px;
+	border: 1px solid blue;
+	margin:5px;
+	display: inline-block;
+}
