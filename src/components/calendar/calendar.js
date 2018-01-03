@@ -9,20 +9,16 @@ export class Calendar extends React.Component {
 	}
 	render() {
 		let {data:{april}} = this.props;
-		let result;
-		if (april) {
-			april.length = 12;
-			let map = [].map;
-			result = map.call(april,(item,index) => <Day key={index} events={item}/>);
-		}
-
+		console.log(april);
 		return (
 			<div>
 			{
 				(april) ?
 				<div className="calendar">
 					{
-						result
+						Array(20).fill(1).map( function(item, index) {
+							return <Day key={index} id={index} events={april["1"].events}/>
+						})
 					}
 				</div>
 				: ''
