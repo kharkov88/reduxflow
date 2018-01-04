@@ -1,6 +1,6 @@
 .calendar {
 	width: 600px;
-	height: 400px;
+	height: 100px;
 	margin: 50px auto;
 	border: 1px solid green;
 	display: flex;

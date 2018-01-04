@@ -6,17 +6,12 @@ export class Day extends React.Component {
 
 	}
 	shouldComponentUpdate(nextProps) {
-		return (nextProps.events !== this.props.events)
+		//return (nextProps.events !== this.props.events)
+		return 1
 	}
 	render() {
-		let i = 6000;
 		console.time('fun')
-		function recur() {
-			if(i==0) {return i}
-			i--;
-			recur(i/0.00000234*1000000/2300000000000)
-		}
-		recur();
+		this.sleep(200);
 		console.timeEnd('fun')
 		console.log(`render ${this.props.id}`);
 		return (
@@ -24,5 +19,13 @@ export class Day extends React.Component {
 	
 			</div>
 		)
+	}
+	sleep(milliseconds) {
+	  var start = new Date().getTime();
+	  for (var i = 0; i < 1e7; i++) {
+	    if ((new Date().getTime() - start) > milliseconds){
+	      break;
+	    }
+	  }
 	}
 }
